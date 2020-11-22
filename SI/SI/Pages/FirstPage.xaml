@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvx:MvxContentPage  xmlns:mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms" 
+                     xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     mc:Ignorable="d"
+                     xmlns:viewModels="clr-namespace:SI.Core.ViewModels;assembly=SI.Core" 
+                     x:TypeArguments="viewModels:FirstPageViewModel"
+                     x:Class="SI.Pages.FirstPage"
+                     Title="Angela SI">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Vertical" Grid.Column="0">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="File path:" FontAttributes="Bold" />
+                        <Span Text="{Binding FilePath}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Choose file" Command="{Binding ChooseFileCommand}"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Signature:" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Signature"
+                   Text="{Binding Signature}"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Sign" Command="{Binding SignCommand}"/>
+                <Button Text="Verify" Command="{Binding VerifyCommand}"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" Grid.Column="1">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Q:" FontAttributes="Bold" />
+                        <Span Text="{Binding Q}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="P:" FontAttributes="Bold" />
+                        <Span Text="{Binding P}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="G:" FontAttributes="Bold" />
+                        <Span Text="{Binding G}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="X:" FontAttributes="Bold" />
+                        <Span Text="{Binding X}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Y:" FontAttributes="Bold" />
+                        <Span Text="{Binding Y}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Generate Keys" Command="{Binding GenerateCommand}"/>
+        </StackLayout>
+    </Grid>
+</mvx:MvxContentPage>

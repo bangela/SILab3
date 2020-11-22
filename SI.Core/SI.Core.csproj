@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.466" />
+    <PackageReference Include="MvvmCross" Version="7.1.2" />
+    <PackageReference Include="MvvmCross.Plugin.File" Version="7.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.41" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DJD.Security">
+      <HintPath>Libs\DJD.Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
